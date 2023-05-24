@@ -1,0 +1,7 @@
+discord.py
+python-dotenv
+pytube
+mutagen
+pydub
+bs4
+openai
