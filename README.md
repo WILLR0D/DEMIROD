@@ -32,4 +32,3 @@ Además, DEMIROD puede responder preguntas utilizando ChatGPT, un modelo de leng
 * `!pausa`: Pausa la canción actual.
 * `!reanudar`: Reanuda la canción pausada.
 * `!reproducir <nombre_canción>`: Reproduce una canción local.
-* `!youtube <URL>`: Busca y reproduce una canción desde una URL de YouTube.
