@@ -24,7 +24,6 @@ async def on_ready():
 
     await bot.add_cog(MusicCog(bot))
     await bot.add_cog(GPTCog(bot))
-    await bot.add_cog(YoutubeCog(bot))
 
     try:
         synce = await bot.tree.sync()
