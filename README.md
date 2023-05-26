@@ -2,11 +2,11 @@
 
 ## Descripción
 
-DEMIROD es un bot de Discord multifuncional diseñado para mejorar tu experiencia en los servidores de Discord. Este proyecto alberga el código fuente y la documentación de DEMIROD, el cual cuenta con características como la reproducción de música local y de YouTube en los canales de voz de Discord, así como la capacidad de responder preguntas utilizando el potente modelo de lenguaje ChatGPT.
+DEMIROD es un bot de Discord multifuncional diseñado para mejorar tu experiencia en los servidores de Discord. Este proyecto alberga el código fuente y la documentación de DEMIROD, el cual cuenta con características como la reproducción de música local en los canales de voz de Discord, así como la capacidad de responder preguntas utilizando el potente modelo de lenguaje ChatGPT.
 
-El bot DEMIROD te permite disfrutar de tus canciones favoritas en Discord. Puedes agregar canciones locales a la lista de reproducción, buscar y reproducir música de YouTube directamente en los canales de voz, controlar la reproducción, ajustar el volumen y explorar diferentes opciones de reproducción.
+El bot DEMIROD te permite disfrutar de tus canciones favoritas en Discord. Puedes agregar canciones locales a la lista de reproducción, controlar la reproducción, ajustar el volumen y explorar diferentes opciones de reproducción.
 
-Además, DEMIROD puede responder preguntas utilizando ChatGPT, un modelo de lenguaje de inteligencia artificial. Puedes hacer preguntas en el chat y el bot proporcionará respuestas basadas en su entrenamiento con una amplia gama de datos.
+Además, DEMIROD puede responder preguntas utilizando ChatGPT, un modelo de lenguaje de inteligencia artificial. Puedes hacer preguntas en el chat y el bot proporcionará respuestas basadas en su entrenamiento con una amplia gama de datos. También cuenta con la capacidad de generar imágenes utilizando DALL·E, una potente herramienta de creación visual.
 
 ## Requisitos previos
 
