@@ -125,15 +125,27 @@ class MusicCog(commands.Cog):
         description="agrega una cancion a la lista de reproduccion",
     )
     async def agregar(self, ctx, nombre_cancion: str):
-        cancion_nueva = Cancion.from_nombre_cancion(nombre_cancion, ruta_canciones)
+        cliente_voz = ctx.guild.voice_client
 
+        cancion_nueva = Cancion.from_nombre_cancion(nombre_cancion, ruta_canciones)
         if cancion_nueva == None:
             await ctx.reply(
                 f"No se pudo obtener la información de la canción: {nombre_cancion}"
             )
             return
 
+        await ctx.defer()
+
         self.lista_reproduccion.append(cancion_nueva)
+
+        print(f"Canción agregada a la lista de reproducción: {cancion_nueva.titulo}")
+
+        print(
+            f"Lista de reproducción después de agregar canción: {self.lista_reproduccion}"
+        )
+
+        if cliente_voz and not cliente_voz.is_playing():
+            await self.reproducir_siguiente_cancion(ctx)
 
         embed = Embed(title=cancion_nueva.titulo, color=0x00FF00)
         embed.set_author(name="🎶 Agregado a la lista")
