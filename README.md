@@ -27,8 +27,10 @@ Además, DEMIROD puede responder preguntas utilizando ChatGPT, un modelo de leng
 * `!dejar`: El bot abandona el canal de voz actual.
 * `!entra`: Indica al bot que se una al canal de voz.
 * `!gpt <Texto>`: Responde lo que envíes utilizando la API de OpenAI.
+* `!generar_imagen <texto>`: generar imagen con DALL·E.
 * `!lista`: Muestra la lista de reproducción actual.
 * `!pasar`: Salta a la siguiente canción en la lista de reproducción.
 * `!pausa`: Pausa la canción actual.
 * `!reanudar`: Reanuda la canción pausada.
 * `!reproducir <nombre_canción>`: Reproduce una canción local.
+
