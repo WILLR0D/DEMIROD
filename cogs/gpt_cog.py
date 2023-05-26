@@ -5,6 +5,9 @@ from discord import Embed
 from discord.ext import commands
 
 
+# Configuramos la clave de la API de OpenAI
+openai.api_key = os.getenv("APIOPENAI")
+
 class GPTCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -15,9 +18,6 @@ class GPTCog(commands.Cog):
     async def responceGPT(self, ctx, mensaje: str):
         # Definimos la pregunta que vamos a hacer a OpenAI
         prompt = mensaje
-
-        # Configuramos la clave de la API de OpenAI
-        openai.api_key = os.getenv("APIOPENAI")
 
         await ctx.defer()
 
@@ -40,6 +40,27 @@ class GPTCog(commands.Cog):
         embed.add_field(name="Mensaje", value=mensaje, inline=False)
         embed.add_field(name="respuesta", value=texto, inline=False)
         await ctx.reply(embed=embed)
+    
+    @commands.hybrid_command(
+        name="generar_imagen",
+        with_app_command=True,
+        description="generar imagen con DALL·E"
+    )
+    async def gpt_image(self, ctx, texto:str):
+        await ctx.defer()
+        response = openai.Image.create(
+            prompt= texto,
+            n=1,
+            size="1024x1024"
+        )
+        image_url = response['data'][0]['url']
+        embed = Embed(title="DALL·E")
+        embed.add_field(name="Prompt: ", value=texto, inline=False)
+        embed.set_image(url=image_url)
+        await ctx.reply(embed=embed)
+
+
+
 
 
 async def setup(bot):
